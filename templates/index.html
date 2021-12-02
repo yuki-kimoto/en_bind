@@ -1,74 +1,74 @@
-<h2>Perlバインディング入門 - C言語/C++/Cudaの呼び出し</h2>
+<h2> Getting Started with Perl Bindings-Calling C / C ++ / Cuda </h2>
 
-Perlのバインディング入門です。バインディングとは、PerlからC言語/C++/Cudaなどで書かれたソースコードをPerlから呼び出せるようにすることをいいます。
+An introduction to Perl bindings. Binding means that you can call source code written in C language / C ++ / Cuda etc. from Perl from Perl.
 
-CやC++でコードを記述すると、最高のパフォーマンスを得ることができます。画像処理・動画処理・信号処理・科学技術計算・機械学習など、数値計算や配列の演算のパフォーマンスが重要視される場合は、C言語やC++のライブラリをPerlからバインディングするというのは、良い解決策のひとつです。
+You can get the best performance by writing your code in C or C ++. When the performance of numerical calculation and array calculation is important such as image processing, video processing, signal processing, scientific and technological calculation, machine learning, binding C language or C ++ library from Perl is a good solution. This is one of the measures.
 
-近年では、<a href="https://en.deeplearning.perlzemi.com/">ディープラーニング</a>で並列計算を行うためにGPUが利用されますが、GPUを利用するためのCuda言語もバインディングも可能です。nvccというコンパイラで、コンパイルされますが、C言語/C++の記法が採用されています。
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=9J-_KxTb0zE">動画紹介</a></li>
-</ul>
-
-<h3>XSを使ったバインディング</h3>
-
-XSを使ったバインディング手法があります。Perlにおけるもっとも標準的な方法です。型変換は手動で、XSのAPIを覚えることが必要で、C言語をバインディングするPerlモジュールとして作成する必要があります。
+In recent years, GPU has been used for parallel computation in <a href="https://en.deeplearning.perlzemi.com/"> deep learning</a>, but the Cuda language for using GPU And binding is also possible. It is compiled by a compiler called nvcc, but the C language / C ++ notation is adopted.
 
 <ul>
-  <li><a href="https://en.perlzemi.com/blog/20100809127859.html">XS入門 - C/C++言語のバインディング</a></li>
+  <li> <a href="https://www.youtube.com/watch?v=9J-_KxTb0zE"> Video introduction</a> </li>
 </ul>
 
-<h3>Inlineモジュールを使ったバインディング</h3>
+<h3> Binding using XS </h3>
 
-Inlineモジュールを使ったバインディング手法があります。C言語のランタイム実行が可能です。型変換は手動です。
+There is a binding method using XS. This is the most standard method in Perl. Type conversion requires you to manually remember the XS API and create it as a Perl module that binds C.
 
-<a href="https://metacpan.org/pod/Inline::C">Inline::C</a> <a href="https://metacpan.org/pod/distribution/Inline-CPP/lib/Inline/CPP.pod">Inline::CPP</a>
+<ul>
+  <li> <a href="https://en.perlzemi.com/blog/20100809127859.html"> Introduction to XS-C / C ++ Language Bindings</a> </li>
+</ul>
 
-<h3>FFIライブラリを使ったバインディング</h3>
+<h3> Binding using Inline module </h3>
 
-FFIライブラリを使ったバインディング手法があります。C言語のランタイム実行が可能です。FFI仕様に基づいた呼び出しで、直接共有ライブラリ(.so)を呼び出すことができます。型変換は手動です。
+There is a binding method using the Inline module. C language runtime execution is possible. Type conversion is manual.
 
-<a href="https://metacpan.org/pod/FFI">FFI</a>, <a href="https://metacpan.org/pod/FFI::Raw">FFI::Raw</a>, <a href="https://metacpan.org/pod/FFI::Platypus">FFI::Platypus</a>
+<a href="https://metacpan.org/pod/Inline :: C"> Inline :: C</a> <a href="https://metacpan.org/pod/distribution/Inline-CPP/ lib / Inline / CPP.pod "> Inline :: CPP</a>
 
-<h3>SPVMを使ったバインディング</h3>
+<h3> Binding using FFI library </h3>
 
-SPVMを使ったバインディング手法があります。SPVMは、Perlバインディングのいくつかの課題を解決するために、木本裕紀が開発している2021年9現在、完成を目指して頻繁に更新されている開発段階のPerlモジュールです。完成度は、95%を超えていますが、試験段階で仕様上の問題点がいくつかでてきたり、実現したい必要な機能がいくつか足りない、ドキュメントが不正確という状況です。
+There is a binding method using the FFI library. C language runtime execution is possible. You can call the shared library (.so) directly with a call based on the FFI specification. Type conversion is manual.
 
-<a href="https://metacpan.org/pod/SPVM">SPVM</a>
+<a href="https://metacpan.org/pod/FFI"> FFI</a>, <a href="https://metacpan.org/pod/FFI :: Raw"> FFI :: Raw < / a>, <a href="https://metacpan.org/pod/FFI :: Platypus"> FFI :: Platypus</a>
 
-<div class="what_is_this_site">
+<h3> Binding using SPVM </h3>
+
+There is a binding method using SPVM. SPVM is a Perl module in the development stage that is being developed by Hiroki Kimoto to solve some of the Perl binding issues and is frequently updated for completion as of September 2021. It's more than 95% complete, but there are some spec issues in the testing phase, some missing features you want to achieve, and inaccurate documentation.
+
+<a href="https://metacpan.org/pod/SPVM"> SPVM</a>
+
+<div class = "what_is_this_site">
   <div>
-    <a rel="nofollow" href="https://en.perlzemi.com/">Perl</a>で数値計算や配列演算のパフォーマンスが欲しいなぁ。<br>そんなときは、<a rel="nofollow" href="https://en.c.perlzemi.com/">C言語</a>を使って関数を記述して、Perlへバインディングするという手法があります。<br>多くのソフトウェアの基盤であり、基礎でもあるC言語はPerlと連携できます。<br>C言語/C++で書かれたライブラリをPerlから呼び出すこともできます。<br>
-    <a rel="nofollow" href="https://en.deeplearning.perlzemi.com/">ディープラーニング</a>で利用されるGPUで計算するためのCuda言語もバインディング可能です。
+    I want the performance of numerical calculation and array calculation with <a rel="nofollow" href="https://en.perlzemi.com/"> Perl</a>. <br> In such a case, write a function using <a rel="nofollow" href="https://en.c.perlzemi.com/"> C language</a> and bind it to Perl. There is a method called. <br> The C language, which is the foundation and foundation of many software, can work with Perl. <br> You can also call a library written in C / C ++ from Perl. <br>
+    The Cuda language for computing on the GPU used in <a rel="nofollow" href="https://en.deeplearning.perlzemi.com/"> deep learning</a> can also be bound.
   </div>
 </div>
 
-<h3>バインディングの基礎知識</h3>
+<h3> Basic knowledge of binding </h3>
 
-Perlバインディングで必要となる基礎知識です。
+Basic knowledge required for Perl bindings.
 
-<h4>Perlプログラミング言語</h4>
+<h4> Perl programming language </h4>
 
-Perlプログラミング言語の講座です。
+A course in the Perl programming language.
 
 <ul>
-  <li><a href="https://en.perlzemi.com/">Perlゼミ - Perlプログラミング入門</a></li>
+  <li> <a href="https://en.perlzemi.com/"> Perl Seminar-Introduction to Perl Programming</a> </li>
 </ul>
 
-<h4>C言語</h4>
+<h4> C language </h4>
 
-C言語の講座です。
+This is a C language course.
 
 <ul>
-  <li><a href="https://en.c.perlzemi.com/">Perl XSユーザーのためのC言語入門</a></li>
+  <li> <a href="https://en.c.perlzemi.com/"> Introduction to C for Perl XS users</a> </li>
 </ul>
 
-<h4>バインディングの質問</h4>
+<h4> Binding question </h4>
 
-仲間と交流をしたり、バインディングの質問ができる会員限定のPerlクラブ・フォーラムがあります。Twitterのリプライ・ダイレクトメッセージ、Youtubeのコメント欄も利用できます。
+There is a members-only Perl Club Forum where you can interact with your peers and ask binding questions. You can also use Twitter's reply / direct message and Youtube's comment section.
 
 <ul>
-  <li><a href="https://perlclub.net/forum">Perlクラブ・フォーラム</a>
-  <li><a href="https://twitter.com/perlzemi">Twitter</a>
-  <li><a href="https://www.youtube.com/channel/UCbeAS6ZXpSKqkzb-Nykb0ZQ">Youtube</a>
+  <li> <a href="https://perlclub.net/forum"> Perl Club Forum</a>
+  <li> <a href="https://twitter.com/perlzemi"> Twitter</a>
+  <li> <a href="https://www.youtube.com/channel/UCbeAS6ZXpSKqkzb-Nykb0ZQ"> Youtube</a>
 </ul>
