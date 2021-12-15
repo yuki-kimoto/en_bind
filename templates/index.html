@@ -1,34 +1,30 @@
-<h2> Getting Started with Perl Bindings-Calling C / C ++ / Cuda </h2>
+<h2> Getting Started with Perl Bindings - Calling C/C++/Cuda </h2>
 
-An introduction to Perl bindings. Binding means that you can call source code written in C language / C ++ / Cuda etc. from Perl from Perl.
+An introduction to Perl bindings. Binding means that you can call source code written in C language/C++/Cuda etc. from Perl from Perl.
 
-You can get the best performance by writing your code in C or C ++. When the performance of numerical calculation and array calculation is important such as image processing, video processing, signal processing, scientific and technological calculation, machine learning, binding C language or C ++ library from Perl is a good solution. This is one of the measures.
+You can get the best performance by writing your code in C or C++. When the performance of numerical calculation and array calculation is important such as image processing, video processing, signal processing, scientific and technological calculation, machine learning, binding C language or C++ library from Perl is a good solution. This is one of the measures.
 
-In recent years, GPU has been used for parallel computation in <a href="https://en.deeplearning.perlzemi.com/"> deep learning</a>, but the Cuda language for using GPU And binding is also possible. It is compiled by a compiler called nvcc, but the C language / C ++ notation is adopted.
-
-<ul>
-  <li> <a href="https://www.youtube.com/watch?v=9J-_KxTb0zE"> Video introduction</a> </li>
-</ul>
+In recent years, GPU has been used for parallel computation in <a href="https://en.deeplearning.perlzemi.com/"> deep learning</a>, but the Cuda language for using GPU And binding is also possible. It is compiled by a compiler called nvcc, but the C language/C++ notation is adopted.
 
 <h3> Binding using XS </h3>
 
 There is a binding method using XS. This is the most standard method in Perl. Type conversion requires you to manually remember the XS API and create it as a Perl module that binds C.
 
 <ul>
-  <li> <a href="https://en.perlzemi.com/blog/20100809127859.html"> Introduction to XS-C / C ++ Language Bindings</a> </li>
+  <li> <a href="https://en.perlzemi.com/blog/20100809127859.html"> Introduction to XS - C/C++ Language Bindings</a> </li>
 </ul>
 
 <h3> Binding using Inline module </h3>
 
 There is a binding method using the Inline module. C language runtime execution is possible. Type conversion is manual.
 
-<a href="https://metacpan.org/pod/Inline :: C"> Inline :: C</a> <a href="https://metacpan.org/pod/distribution/Inline-CPP/ lib / Inline / CPP.pod "> Inline :: CPP</a>
+<a href="https://metacpan.org/pod/Inline::C"> InlineC</a> <a href="https://metacpan.org/pod/distribution/Inline-CPP/lib/Inline/CPP.pod "> InlineCPP</a>
 
 <h3> Binding using FFI library </h3>
 
 There is a binding method using the FFI library. C language runtime execution is possible. You can call the shared library (.so) directly with a call based on the FFI specification. Type conversion is manual.
 
-<a href="https://metacpan.org/pod/FFI"> FFI</a>, <a href="https://metacpan.org/pod/FFI :: Raw"> FFI :: Raw < / a>, <a href="https://metacpan.org/pod/FFI :: Platypus"> FFI :: Platypus</a>
+<a href="https://metacpan.org/pod/FFI"> FFI</a>, <a href="https://metacpan.org/pod/FFI::Raw"> FFIRaw </a>, <a href="https://metacpan.org/pod/FFI::Platypus"> FFIPlatypus</a>
 
 <h3> Binding using SPVM </h3>
 
@@ -38,8 +34,8 @@ There is a binding method using SPVM. SPVM is a Perl module in the development s
 
 <div class = "what_is_this_site">
   <div>
-    I want the performance of numerical calculation and array calculation with <a rel="nofollow" href="https://en.perlzemi.com/"> Perl</a>. <br> In such a case, write a function using <a rel="nofollow" href="https://en.c.perlzemi.com/"> C language</a> and bind it to Perl. There is a method called. <br> The C language, which is the foundation and foundation of many software, can work with Perl. <br> You can also call a library written in C / C ++ from Perl. <br>
-    The Cuda language for computing on the GPU used in <a rel="nofollow" href="https://en.deeplearning.perlzemi.com/"> deep learning</a> can also be bound.
+    I want the performance of numerical calculation and array calculation with <a href="https://en.perlzemi.com/"> Perl</a>. <br> In such a case, write a function using <a href="https://en.c.perlzemi.com/"> C language</a> and bind it to Perl. There is a method called. <br> The C language, which is the foundation and foundation of many software, can work with Perl. <br> You can also call a library written in C/C++ from Perl. <br>
+    The Cuda language for computing on the GPU used in <a href="https://en.deeplearning.perlzemi.com/"> deep learning</a> can also be bound.
   </div>
 </div>
 
@@ -52,7 +48,7 @@ Basic knowledge required for Perl bindings.
 A course in the Perl programming language.
 
 <ul>
-  <li> <a href="https://en.perlzemi.com/"> Perl Seminar-Introduction to Perl Programming</a> </li>
+  <li> <a href="https://en.perlzemi.com/"> Perl Zemi - Introduction to Perl Programming</a> </li>
 </ul>
 
 <h4> C language </h4>
@@ -61,14 +57,4 @@ This is a C language course.
 
 <ul>
   <li> <a href="https://en.c.perlzemi.com/"> Introduction to C for Perl XS users</a> </li>
-</ul>
-
-<h4> Binding question </h4>
-
-There is a members-only Perl Club Forum where you can interact with your peers and ask binding questions. You can also use Twitter's reply / direct message and Youtube's comment section.
-
-<ul>
-  <li> <a href="https://perlclub.net/forum"> Perl Club Forum</a>
-  <li> <a href="https://twitter.com/perlzemi"> Twitter</a>
-  <li> <a href="https://www.youtube.com/channel/UCbeAS6ZXpSKqkzb-Nykb0ZQ"> Youtube</a>
 </ul>
